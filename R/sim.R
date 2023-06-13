@@ -1,11 +1,11 @@
-
-
-
+## Load libraries
+library("here")
 library('Rcpp')
 library('RcppArmadillo')
-#sourceCpp("~/Library/Mobile Documents/com~apple~CloudDocs/Documents/makeMastOnJimClark/makeMast/RcppFunctions/cppFns.cpp")
-Rcpp::sourceCpp("~/Documents/GJAM/makeGJAMcurrent/RcppFunctions/cppFns.cpp")
-source("~/Documents/Manuscripts/individCESAB/simFunctions.R")
+
+## Source code
+Rcpp::sourceCpp(here("src", "cppFns.cpp"))
+source(here("R", "simFunctions.R"))
 
 ################## a few notes on dimensionality
 E <- 100
